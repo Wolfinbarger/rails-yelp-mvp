@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+# Use faker to generate resturant data
+gem "faker", "~> 3.2.0"
+
 #Use simple_form to create forms
 gem "simple_form"
 
