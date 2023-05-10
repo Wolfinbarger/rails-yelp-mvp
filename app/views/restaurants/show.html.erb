@@ -1,13 +1,23 @@
 <h1>Resturant</h1>
 
   <div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2> <%= @restaurant.name %> </h2>
-      <p> <%= @restaurant.address %> </p>
-      <p> <%= @restaurant.phone_number %> </p>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= @restaurant.name %> </h2>
+        <p> <%= @restaurant.address %> </p>
+        <p> <%= @restaurant.phone_number %> </p>
+      </div>
+      <h6> <%= @restaurant.category.upcase %> </h6>
     </div>
-    <h6> <%= @restaurant.category.upcase %> </h6>
   </div>
-  </div>
+
+<%= link_to 'Review', new_restaurant_review_path(@restaurant), class: 'btn btn-primary'%>
+
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">Rating:<%= review.rating %> <br><%= review.content %></li>
+  <% end %>
+</ul>
+<br>

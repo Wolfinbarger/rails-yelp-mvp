@@ -1,4 +1,6 @@
-<h1>Restaurants</h1>
+<h1><%= link_to 'Restaurants', new_restaurant_path%>Restaurants</h1>
+<h3> <%= link_to 'Create new restaurant', new_restaurant_path%> </h3>
+
 <% @restaurants.each do |resturant| %>
   <div class="card-trip">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />

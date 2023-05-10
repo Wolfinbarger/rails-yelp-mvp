@@ -9,6 +9,7 @@
 5.times do
   restaurant = Restaurant.new(name: Faker::Restaurant.name,
                               address: Faker::Address.full_address,
-                              category: Restaurant::CATEGORY.sample)
+                              category: Restaurant::CATEGORY.sample,
+                              phone_number: Faker::PhoneNumber.cell_phone)
   restaurant.save
 end
